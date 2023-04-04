@@ -238,32 +238,48 @@ CuboidMaker.prototype.surfaceArea = function () {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
 /*const cubeButNot = new CuboidMaker ({
-  length: 20,
-  width: 10,
-  height: 8
+  length: 4,
+  width: 5,
+  height: 5
 })
 
-console.log(cubeButNot)*/
+console.log(cuboid)*/
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+ //console.log(cuboid.volume()); // 100
+ //console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //Using CuboidMakerTwo, take your prototypes from above and refactor into class syntax. Then, create an object called cuboidTwo that uses the new keyword to use our CuboidMakerTwo class.
  
 class CuboidMakerTwo{
+  constructor (props) {
+    this.length = props.length
+    this.width = props.width
+    this.height = props.height
+  }
 
+  volume () {
+    return this.length * this.width * this.height
+  }
+
+  surfaceArea () {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+  }
 }
 
-
+const cuboidTwo = new CuboidMakerTwo ({
+  length: 4,
+  width: 5,
+  height: 5
+})
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+ console.log(cuboidTwo.volume()); // 100
+ console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
