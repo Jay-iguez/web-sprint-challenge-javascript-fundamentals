@@ -26,13 +26,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+The advanced array method '.map' is used to manipulate or reshape the data of a given array without altering said array. It is useful if you only want certain parts of an array and also want to ignore others, by doing so you can refine the data to that what you specificly need.
+
+The advanced array method '.reduce' is used to shape data into a single value at your leisure, it won't return an array but rather a single value from what you set as what you need from it's own parameters at each element. It is useful for manipulating data of an existing array without altering said array.
+
+The advanced array method '.filter' is used to return a new array with items that fit a given description to what you need. It will test each element and if it returns true based off your given requirements, it will return that element otherwise it will ignore it. It's great as is with other advanced array methods to manipulate the data of a given array without altering said array.
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that is passed another function as a parameter. A callback function is a function that is itself passed as an argument into another function, that being a higher order function.
 
 3. Explain what a closure is.
 
+A closure is the concept of a variable being declared outside of a given function's scope. Once that function attempts to reach out and find the data for a variable that it out of its scope, that's where and when a closure happens. Closures have the ability to store/retrieve data from a given variable even if the function it is attached to stops running, essentially saving it's value for later use.
+
 4. Describe the four principles of the 'this' keyword.
 
+The four principles of the 'this' keyword go as follows - 
+
+Window binding - The default given context of 'this' if you have not given it any context. It will return to the 'window' or the global object in node or undefined strict mode.
+
+Implicit binding - Applies to objects with methods. Whenever the method or function of an object is invoked, whatever is to the left of the dot is what the 'this' context will refer to.
+
+Explicit binding - We can call a function and explicitly give it context to look for using .apply, .call, or .bind. Call will act on objects, by passing in the object as an array into the attached function. Apply will act on arrays in a similar manner. Bind can be used to save a specific instance explictly defining the params of a new function that can be used/accessed for later.
+
 5. Why do we need super() in an extended class?
+
+You need super() to allow for the constuctor of a given class to be able to take the properties of the passed in param into the constructors own body, but also that of the body your extending from. Otherwise, the 'chiid' class won't be able to reach into it's 'parent' class for it's initializers or methods.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
