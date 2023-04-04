@@ -17,7 +17,13 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+/* 
 
+The function 'nestedFunction' can access the variable 'internal' because of scope and closure. While 'internal' is not directly in the function scope of 'nestedFunction', because it's a
+nested function within 'myFunction', this allows it to use of lexical scoping and reach outward to find 'internal'. As a result of this, not only can it find the decleration/definiton of
+'internal' but there is also a closure occuring between the function and the variable as a direct result of 'nestedFunction' reaching out to find 'internal'.
+
+*/
 
 
 
@@ -30,11 +36,16 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0
+  for (let i = 0; i <= number; i++) {
+    sum = sum + i
   }
- 
+  return sum
+  }
+
+  console.log(`Task 2`, summation(4))
+ // I want summation(4) = 10 because 1+2+3+4 is 10 / summation(8) = 36 because 1+2+3+4+5+6+7+8 is 10.
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
